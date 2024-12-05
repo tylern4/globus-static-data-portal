@@ -1,0 +1,14 @@
+FROM node:lts-bullseye
+
+RUN apt-get update && apt-get install -y gettext
+
+WORKDIR /static/site
+COPY . static-data-portal
+WORKDIR /static/site/static-data-portal
+RUN npm install && npm install serve --global
+COPY container/static.json.tmp /static/site/static-data-portal/static.json.tmp
+COPY container/entrypoint.sh /static/site/static-data-portal/entrypoint.sh
+
+ENTRYPOINT [ "./entrypoint.sh" ]
+
+

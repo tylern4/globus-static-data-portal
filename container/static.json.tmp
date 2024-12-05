@@ -1,0 +1,25 @@
+{
+  "_static": {
+    "generator": {
+      "name": "@globus/static-data-portal"
+    }
+  },
+  "data": {
+    "version": "1.0.0",
+    "attributes": {
+      "content": {
+        "title": "${GLOBUS_SITE_TITLE}",
+        "image": "${GLOBUS_HEADER_IMAGE}"
+      },
+      "globus": {
+        "application": {
+          "client_id": "${GLOBUS_CLIENT_ID}"
+        },
+        "transfer": {
+          "collection_id": "${GLOBUS_COLLECTION_ID}",
+          "path": "${GLOBUS_BASE_PATH}"
+        }
+      }
+    }
+  }
+}
